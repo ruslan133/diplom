@@ -5,7 +5,7 @@ pipeline {
         stage('Копирую к себе репы с GIT') {
             steps {
                 
-               sh "echo "work"
+               sh 'echo "work"'
                 
             }
         }  
