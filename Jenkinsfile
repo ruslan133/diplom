@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Копирую к себе репы с GIT') {
             steps {
-                
-               sh 'touch 1.txt && echo "work"'
+               sh 'cp arch/diplom .' 
+               // sh 'touch 1.txt && echo "work"'
                 
             }
         }  
