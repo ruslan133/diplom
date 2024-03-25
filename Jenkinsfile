@@ -4,9 +4,8 @@ pipeline {
     stages {
         stage('Копирую к себе репы с GIT') {
             steps {
-               sh 'cp ~/arch/diplom .' 
-               // sh 'touch 1.txt && echo "work"'
-                
+               sh 'git clone https://github.com/ruslan133/diplom.git' 
+                               
             }
         }  
     }
