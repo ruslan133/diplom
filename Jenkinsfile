@@ -17,7 +17,7 @@ pipeline {
                 '''                               
             }
         }  
-        stage('Копирую к себе репы с GIT') {
+        stage('Push ee') {
             steps {
                
                 sh '''
