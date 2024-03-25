@@ -14,9 +14,9 @@ pipeline {
                   TAG=$BUILD_TAG
 
 
-       docker info
- docker build . --tag $APP
- docker tag $APP $CI_REGISTRY_USER/$APP:$TAG
+       sudo docker info
+sudo  docker build . --tag $APP
+sudo  docker tag $APP $CI_REGISTRY_USER/$APP:$TAG
 
                 
                 echo "indiplom"
