@@ -21,11 +21,13 @@ pipeline {
             steps {
                
                 sh '''
+                
                 cd diplom
                 sudo docker info
                 sudo docker login -u ruslan133 -p 19781805Rus
                 APP=diplom_app
                 TAG=$BUILD_ID
+                sudo sudo service docker restart
                 sudo docker push ruslan133/$APP:$TAG
                 '''
                                
