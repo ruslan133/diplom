@@ -22,11 +22,11 @@ pipeline {
                
                 sh '''
                 cd diplom
-                docker info
-                docker login -u ruslan133 -p 19781805Rus
+                sudo docker info
+                sudo docker login -u ruslan133 -p 19781805Rus
                 APP=diplom_app
                 TAG=$BUILD_ID
-                docker push ruslan133/$APP:$TAG
+                sudo docker push ruslan133/$APP:$TAG
                 '''
                                
             }
