@@ -20,8 +20,7 @@ pipeline {
         stage('Push ee') {
             steps {
                
-                sh '''
-                
+                sh '''                
                 cd diplom
                 sudo docker info
                 sudo docker login -u ruslan133 -p 19781805Rus
