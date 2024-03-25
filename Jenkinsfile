@@ -11,12 +11,12 @@ pipeline {
                 cd diplom
 
                   APP=diplom_app
-                  TAG=$BUILD_TAG
+                  TAG=$BUILD_ID
 
 
        sudo docker info
 sudo  docker build . --tag $APP
-sudo  docker tag $APP $CI_REGISTRY_USER/$APP:$TAG
+sudo  docker tag $APP ruslan133/$APP:$TAG
 
                 
                 echo "indiplom"
