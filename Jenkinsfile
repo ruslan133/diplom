@@ -9,6 +9,17 @@ pipeline {
                 rm -rf diplom
                 git clone https://github.com/ruslan133/diplom.git
                 cd diplom
+
+      APP=diplom_app
+      TAG=$BUILD_TAG
+
+      echo $TAG
+   #- env
+# - docker info
+#    - docker build . --tag $APP
+ #   - docker tag $APP $CI_REGISTRY_USER/$APP:$TAG
+
+                
                 echo "indiplom"
                 
                 '''
