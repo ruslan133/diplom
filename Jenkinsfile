@@ -31,6 +31,16 @@ pipeline {
                 '''
                                
             }
+        } 
+         stage('deploy ee') {
+            steps {
+               
+                sh '''                
+                cd diplom
+                # ssh -o StrictHostKeyChecking=no  ubuntu@kuber1 "sudo helm upgrade app /root/kuber/helm --set app_image=$CI_REGISTRY_USER/$APP:$TAG"
+                '''
+                               
+            }
         }  
     }
 }
