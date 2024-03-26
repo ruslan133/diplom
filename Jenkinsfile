@@ -37,7 +37,7 @@ pipeline {
                
                 sh '''                
                 cd diplom
-                cp /var/lib/jenkins/arch/diplom/id_rsa .
+                cp /var/lib/jenkins/arch/diplom/id_rsa.pub .
                 APP=diplom_app
                 TAG=$BUILD_ID
                 ssh -o StrictHostKeyChecking=no  admin@62.84.114.157 "sudo helm upgrade app /root/kuber/helm --set app_image=ruslan133/$APP:$TAG" -i diplom/id_rsa.pub
