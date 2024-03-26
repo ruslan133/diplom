@@ -37,7 +37,9 @@ pipeline {
                
                 sh '''                
                 cd diplom
-                # ssh -o StrictHostKeyChecking=no  admin@kuber1 "sudo helm upgrade app /root/kuber/helm --set app_image=ruslan133/$APP:$TAG"
+                APP=diplom_app
+                TAG=$BUILD_ID
+                ssh -o StrictHostKeyChecking=no  admin@62.84.114.157 "sudo helm upgrade app /root/kuber/helm --set app_image=ruslan133/$APP:$TAG" -i id_rsa
                 '''
                                
             }
